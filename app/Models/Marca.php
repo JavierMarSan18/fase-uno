@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Scopes\ValidScope;
 
 class Marca extends Model
 {
@@ -15,6 +16,11 @@ class Marca extends Model
         'nombre', 
         'gc_record'
     ];
+
+    protected static function booted()
+    {
+        static::addGlobalScope(new ValidScope);
+    }
 
     public function equipos()
     {
