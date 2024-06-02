@@ -15,7 +15,7 @@ return new class extends Migration
             $table->foreignId('equipo_id')->references('equipo_id')->on('equipos');
             $table->foreignId('estado_id')->references('estado_id')->on('estados');
             $table->text('diagnostico');
-            $table->text('solucion');
+            $table->text('solucion')->nullable();;
             $table->timestamp('fecha_inicio');
             $table->timestamp('fecha_fin')->nullable();
             $table->integer('gc_record')->nullable();

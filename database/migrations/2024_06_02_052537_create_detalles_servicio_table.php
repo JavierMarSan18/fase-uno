@@ -14,7 +14,7 @@ return new class extends Migration
             $table->foreignId('estado_id')->references('estado_id')->on('estados');
             $table->timestamp('fecha_inicio');
             $table->timestamp('fecha_fin')->nullable();
-            $table->text('observaciones');
+            $table->text('observaciones')->nullable();;
             $table->integer('gc_record')->nullable();
             $table->timestamps();
         });
