@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Scopes\ValidScope;
 
 class Cliente extends Model
 {
@@ -20,6 +21,11 @@ class Cliente extends Model
         'created_at', 
         'updated_at'
     ];
+
+    protected static function booted()
+    {
+        static::addGlobalScope(new ValidScope);
+    }
 
     public function persona()
     {
