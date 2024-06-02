@@ -13,7 +13,7 @@ class Equipo extends Model
 
     protected $fillable = [
         'marca_id', 
-        'tipo_equipo_id', 
+        'tipo_id', 
         'modelo', 
         'gc_record'
     ];
@@ -23,9 +23,9 @@ class Equipo extends Model
         return $this->belongsTo(Marca::class, 'marca_id');
     }
 
-    public function tipoEquipo()
+    public function tipo()
     {
-        return $this->belongsTo(TipoEquipo::class, 'tipo_equipo_id');
+        return $this->belongsTo(Tipo::class, 'tipo_id');
     }
 
     public function servicios()
