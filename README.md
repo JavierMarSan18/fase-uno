@@ -1,4 +1,17 @@
 <h1>Examen Práctico Fase 1</h1>
+<h2>Preparación</h2>
+<ul>
+    <li>Lugo de clonar el proyecto es necesario agregar un archivo .env con las configuraciones de la base de datos</li>
+    <li>En el mismo directorio del proyecto ejecutar los siguientes comandos</li>
+    <li>
+        <ol>
+            <li>php artisan migrate</li>
+            <li>php artisan db:seed</li>
+            <li>php artisan serve</li>
+        </ol>
+    </li>
+</ul>
+
 <h2>Crear un nuevo servicio</h2>
 <img width="972" alt="crear servicio" src="https://github.com/JavierMarSan18/fase-uno/assets/60634574/7070e2d7-6eaf-4db7-8e15-a810e722a433">
 <h2>Ver el servicio creado</h2>
