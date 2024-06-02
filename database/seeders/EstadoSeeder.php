@@ -11,6 +11,7 @@ class EstadoSeeder extends Seeder
     public function run()
     {
         $estados = [
+            ['nombre' => 'Pendiente', 'orden' => 0],
             ['nombre' => 'Recibido', 'orden' => 1],
             ['nombre' => 'Reparado', 'orden' => 2],
             ['nombre' => 'Finalizado', 'orden' => 3],

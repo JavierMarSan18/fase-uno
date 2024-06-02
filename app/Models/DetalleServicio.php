@@ -19,6 +19,7 @@ class DetalleServicio extends Model
         'fecha_inicio', 
         'fecha_fin', 
         'observaciones', 
+        'orden',
         'gc_record'
     ];
 

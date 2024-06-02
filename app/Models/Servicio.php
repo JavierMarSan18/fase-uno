@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Scopes\ValidScope;
 
 class Servicio extends Model
 {
@@ -22,6 +23,11 @@ class Servicio extends Model
         'fecha_fin', 
         'gc_record'
     ];
+
+    protected static function booted()
+    {
+        static::addGlobalScope(new ValidScope);
+    }
 
     public function cliente()
     {

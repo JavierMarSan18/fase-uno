@@ -21,5 +21,7 @@ Route::resource('marcas', MarcaController::class);
 Route::resource('tipos', TipoController::class);
 Route::resource('equipos', EquipoController::class);
 Route::resource('estados', EstadoController::class);
-// Route::resource('servicios', ServicioController::class);
+Route::resource('servicios', ServicioController::class);
+Route::post('servicios/startDetalle/{detalle}', [ServicioController::class, 'startDetalle'])->name('servicios.startDetalle');
+Route::post('servicios/endDetalle/{detalle}', [ServicioController::class, 'endDetalle'])->name('servicios.endDetalle');
 // Route::resource('detalles-servicio', DetalleServicioController::class);

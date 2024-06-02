@@ -12,10 +12,11 @@ return new class extends Migration
             $table->id('detalle_servicio_id');
             $table->foreignId('servicio_id')->references('servicio_id')->on('servicios');
             $table->foreignId('estado_id')->references('estado_id')->on('estados');
-            $table->timestamp('fecha_inicio');
+            $table->timestamp('fecha_inicio')->nullable();
             $table->timestamp('fecha_fin')->nullable();
             $table->text('observaciones')->nullable();;
             $table->integer('gc_record')->nullable();
+            $table->integer('orden');
             $table->timestamps();
         });
     }
