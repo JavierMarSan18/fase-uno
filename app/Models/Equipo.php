@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Equipo extends Model
+{
+    use HasFactory;
+
+    protected $primaryKey = 'equipo_id';
+
+    protected $fillable = [
+        'marca_id', 
+        'tipo_equipo_id', 
+        'modelo', 
+        'gc_record'
+    ];
+
+    public function marca()
+    {
+        return $this->belongsTo(Marca::class, 'marca_id');
+    }
+
+    public function tipoEquipo()
+    {
+        return $this->belongsTo(TipoEquipo::class, 'tipo_equipo_id');
+    }
+
+    public function servicios()
+    {
+        return $this->hasMany(Servicio::class, 'equipo_id');
+    }
+}
