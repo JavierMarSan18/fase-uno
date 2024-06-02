@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 Route::resource('personas', PersonaController::class);
 Route::resource('clientes', ClienteController::class);
-// Route::resource('tecnicos', TecnicoController::class);
+Route::resource('tecnicos', TecnicoController::class);
 // Route::resource('marcas', MarcaController::class);
 // Route::resource('tipos-equipo', TipoEquipoController::class);
 // Route::resource('equipos', EquipoController::class);

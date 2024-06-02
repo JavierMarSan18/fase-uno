@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Scopes\ValidScope;
 
 class Tecnico extends Model
 {
@@ -21,6 +22,10 @@ class Tecnico extends Model
         'updated_at'
     ];
 
+    protected static function booted()
+    {
+        static::addGlobalScope(new ValidScope);
+    }
 
     public function persona()
     {
