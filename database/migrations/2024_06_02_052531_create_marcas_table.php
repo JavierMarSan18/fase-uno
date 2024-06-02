@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('marcas', function (Blueprint $table) {
             $table->id('marca_id');
             $table->string('nombre', 45);
-            $table->integer('gc_record');
+            $table->integer('gc_record')->nullable();
             $table->timestamps();
         });
     }

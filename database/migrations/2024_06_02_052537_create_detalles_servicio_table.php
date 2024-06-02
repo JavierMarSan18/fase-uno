@@ -15,7 +15,7 @@ return new class extends Migration
             $table->timestamp('fecha_inicio');
             $table->timestamp('fecha_fin')->nullable();
             $table->text('observaciones');
-            $table->integer('gc_record');
+            $table->integer('gc_record')->nullable();
             $table->timestamps();
         });
     }

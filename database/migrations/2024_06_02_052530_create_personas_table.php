@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('tercer_nombre', 100)->nullable();
             $table->string('primer_apellido', 100);
             $table->string('segundo_apellido', 100)->nullable();
-            $table->integer('gc_record');
+            $table->integer('gc_record')->nullable();
             $table->timestamps();
         });
     }

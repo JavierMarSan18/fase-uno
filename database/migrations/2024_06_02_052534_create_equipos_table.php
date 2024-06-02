@@ -13,7 +13,7 @@ return new class extends Migration
             $table->foreignId('marca_id')->references('marca_id')->on('marcas');
             $table->foreignId('tipo_equipo_id')->references('tipo_equipo_id')->on('tipos_equipo');
             $table->string('modelo', 100);
-            $table->integer('gc_record');
+            $table->integer('gc_record')->nullable();
             $table->timestamps();
         });
     }

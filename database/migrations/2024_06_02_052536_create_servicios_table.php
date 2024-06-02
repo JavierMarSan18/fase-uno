@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('solucion');
             $table->timestamp('fecha_inicio');
             $table->timestamp('fecha_fin')->nullable();
-            $table->integer('gc_record');
+            $table->integer('gc_record')->nullable();
             $table->timestamps();
         });
     }

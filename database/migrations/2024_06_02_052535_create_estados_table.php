@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id('estado_id');
             $table->string('nombre', 45);
             $table->integer('orden');
-            $table->integer('gc_record');
+            $table->integer('gc_record')->nullable();
             $table->timestamps();
         });
     }

@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('tipos_equipo', function (Blueprint $table) {
             $table->id('tipo_equipo_id');
             $table->string('nombre', 100);
-            $table->integer('gc_record');
+            $table->integer('gc_record')->nullable();
             $table->timestamps();
         });
     }
