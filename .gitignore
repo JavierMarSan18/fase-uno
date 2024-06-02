@@ -1,0 +1,45 @@
+# PHP Unit
+.phpunit.cache
+.phpunit.result.cache
+
+# Node modules and build directories
+/node_modules
+/public/build
+/public/hot
+
+# Laravel specific directories
+/public/storage
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/data
+/storage/framework/sessions
+/storage/framework/testing
+/storage/framework/views
+
+# Composer
+/vendor
+
+# Environment files
+.env
+.env.*
+
+# Local environment files
+.phpactor.json
+Homestead.json
+Homestead.yaml
+auth.json
+
+# Debug and error logs
+npm-debug.log
+yarn-error.log
+
+# IDE and editor settings
+/.fleet
+/.idea
+/.vscode
+
+# Cache and compiled files
+bootstrap/cache/*
+
+# Test output
+tests/_output/
