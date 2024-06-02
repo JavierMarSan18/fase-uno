@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Scopes\ValidScope;
 
 class Estado extends Model
 {
@@ -16,6 +17,11 @@ class Estado extends Model
         'orden', 
         'gc_record'
     ];
+
+    protected static function booted()
+    {
+        static::addGlobalScope(new ValidScope);
+    }
 
     public function servicios()
     {
