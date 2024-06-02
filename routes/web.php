@@ -19,7 +19,7 @@ Route::resource('clientes', ClienteController::class);
 Route::resource('tecnicos', TecnicoController::class);
 Route::resource('marcas', MarcaController::class);
 Route::resource('tipos', TipoController::class);
-// Route::resource('equipos', EquipoController::class);
+Route::resource('equipos', EquipoController::class);
 // Route::resource('estados', EstadoController::class);
 // Route::resource('servicios', ServicioController::class);
 // Route::resource('detalles-servicio', DetalleServicioController::class);
