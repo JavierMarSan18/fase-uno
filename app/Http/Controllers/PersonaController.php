@@ -24,7 +24,6 @@ class PersonaController extends Controller
         $request->validate([
             'primer_nombre' => 'required',
             'primer_apellido' => 'required',
-            // Agrega más validaciones según sea necesario
         ]);
 
         Persona::create($request->all());
@@ -47,7 +46,6 @@ class PersonaController extends Controller
         $request->validate([
             'primer_nombre' => 'required',
             'primer_apellido' => 'required',
-            // Agrega más validaciones según sea necesario
         ]);
 
         $persona->update($request->all());
@@ -57,6 +55,11 @@ class PersonaController extends Controller
 
     public function destroy(Persona $persona)
     {
+        if ($persona->clientes()->exists() || $persona->tecnicos()->exists()) {
+            return redirect()->route('personas.index')
+                             ->with('error', 'No se puede eliminar la persona porque está asociada a un cliente o técnico.');
+        }
+
         $persona->gc_record = Carbon::now()->format('Ymd');
         $persona->save();
         return redirect()->route('personas.index')
