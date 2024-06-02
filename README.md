@@ -10,6 +10,7 @@
 <img width="910" alt="pendiente" src="https://github.com/JavierMarSan18/fase-uno/assets/60634574/175337f6-96b9-4c92-ae53-0aabe39e6af1">
 <h2>Presiona en "Finalizar" en cada etapa para dar por terminada la etapa</h2>
 <h2>Las diferentes etapas del servicio</h2>
+<img width="882" alt="finalizar recibido" src="https://github.com/JavierMarSan18/fase-uno/assets/60634574/fa655ae1-e97d-431f-870a-4c34778a3caf">
 <img width="932" alt="comenzar reparando" src="https://github.com/JavierMarSan18/fase-uno/assets/60634574/94cba607-907f-48dd-b089-a31d5fef3489">
 <img width="923" alt="finalizar reparando" src="https://github.com/JavierMarSan18/fase-uno/assets/60634574/9d330d62-82b1-4f0b-9099-5d914d855f6e">
 <img width="954" alt="comenzar finalizado" src="https://github.com/JavierMarSan18/fase-uno/assets/60634574/caafe4ea-575a-4168-b77b-39954a80eb53">
